@@ -7,6 +7,8 @@ use dotenv::dotenv;
 
 use std::env;
 
+use chrono;
+
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     println!("Homepage server running..");
@@ -50,7 +52,7 @@ async fn index() -> impl Responder {
         base: BaseTemplate {
             title: String::from("Hello world")
         },
-        description: String::from("This site is running.")
+        description: format!("rendered at: {}", chrono::Local::now()),
     };
     HttpResponse::Ok().body(tmpl.render().unwrap())
 }
