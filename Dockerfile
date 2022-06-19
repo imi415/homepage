@@ -17,7 +17,7 @@ RUN npm install
 RUN npx webpack --mode=production
 
 
-FROM alpine:latest
+FROM debian:buster
 RUN mkdir /app
 
 WORKDIR /app

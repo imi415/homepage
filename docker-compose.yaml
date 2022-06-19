@@ -1,0 +1,6 @@
+version: "3"
+services:
+  homepage:
+    build: .
+    ports:
+      - "127.0.0.1:10099:3000"
