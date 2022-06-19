@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    {% include "layouts/_navbar.html.j2" %}
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <script type="application/javascript" src="/dist/js/bundle.js"></script>
+</body>
